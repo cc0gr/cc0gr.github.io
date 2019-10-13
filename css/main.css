@@ -1252,7 +1252,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff1cff;
+  background: #38ffab;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3024,9 +3024,6 @@ img.site-author-image {
 .sidebar-inner {
   box-shadow: none;
 }
-.sidebar-inner {
-  box-shadow: none;
-}
 .sidebar-inner.affix-top {
   padding: 0px;
 }
@@ -3198,4 +3195,16 @@ blockquote {
 }
 .main::after {
   clear: both;
+}
+.site-subtitle {
+  color: #ddd;
+  font-size: 0.8125em;
+  margin-top: 10px;
+}
+.site-subtitle {
+  font-weight: initial;
+  margin: 10px 10px 0;
+}
+header#header {
+  padding: 0px 8px;
 }
