@@ -3,7 +3,7 @@
   <entry>
     <title>渗透测试之03基础篇</title>
     <url>/2019/10/13/03-sec/</url>
-    <content><![CDATA[<h2 id="渗透测试术语"><a href="#渗透测试术语" class="headerlink" title="渗透测试术语"></a>渗透测试术语</h2><p><font color="#EE4000">SQL</font><br>SQL（Struct Querry Language）<font color="#EE799F">结构化查询语言</font>,是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名</p><p><font color="#EE4000">XSS</font><br>CSS（Cross  Site Script）<font color="#EE799F">跨站脚本攻击</font>，为了和HTML中的CSS（层叠样式）进行区分，在信息安全领域内，我们习惯将跨站脚本攻击成为“XSS”</p><a id="more"></a>
+    <content><![CDATA[<h2 id="渗透测试术语"><a href="#渗透测试术语" class="headerlink" title="渗透测试术语"></a>渗透测试术语</h2><p><font color="#EE4000">SQL</font><br>SQL（Struct Querry Language）<font color="#EE799F">结构化查询语言</font>,是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名</p><p><font color="#EE4000">XSS</font><br>CSS（Cross  Site Script）<font color="#EE799F">跨站脚本攻击</font>，为了和HTML中的CSS（层叠样式）进行区分，在信息安全领域内，我们习惯将跨站脚本攻击称为“XSS”</p><a id="more"></a>
 
 <p><font color="#EE4000">CSRF</font><br>CSRF（Cross-site request forgery）<font color="#EE799F">跨站请求伪造</font>，也是一种漏洞的类型。</p>
 <p><font color="#EE4000">SSRF</font><br>SSRF(Server-Side Request Forgery)<font color="#EE799F">服务器请求伪造</font>，是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统。</p>
