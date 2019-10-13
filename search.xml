@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>渗透测试之03基础篇</title>
+    <url>/2019/10/13/03-sec/</url>
+    <content><![CDATA[<h2 id="渗透测试术语"><a href="#渗透测试术语" class="headerlink" title="渗透测试术语"></a>渗透测试术语</h2><p><font color="#EE4000">SQL</font><br>SQL（Struct Querry Language）<font color="#EE799F">结构化查询语言</font>,是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名</p><p><font color="#EE4000">XSS</font><br>CSS（Cross  Site Script）<font color="#EE799F">跨站脚本攻击</font>，为了和HTML中的CSS（层叠样式）进行区分，在信息安全领域内，我们习惯将跨站脚本攻击成为“XSS”</p><a id="more"></a>
+
+<p><font color="#EE4000">CSRF</font><br>CSRF（Cross-site request forgery）<font color="#EE799F">跨站请求伪造</font>，也是一种漏洞的类型。</p>
+<p><font color="#EE4000">SSRF</font><br>SSRF(Server-Side Request Forgery)<font color="#EE799F">服务器请求伪造</font>，是一种由攻击者构造形成由服务端发起请求的一个安全漏洞。一般情况下，SSRF攻击的目标是从外网无法访问的内部系统。（正是因为它是由服务端发起的，所以它能够请求到与它相连而与外网隔离的内部系统。</p>
+<p><font color="#EE4000">WAF</font><br>WAF（WebApplicationFirewall）<font color="#EE799F">WEB应用防护系统</font>，也称之为网站应用级入侵防御系统。</p>
+<p><font color="#EE4000">Exploit</font><br>Exploit，<font color="#EE799F">漏洞利用代码</font>。时常我们会看到不少的CVE漏洞被公布出来，有些CVE漏洞就会附加一些Exploit的代码程序，只要你将代码以正确的形式针对合适的目标测试那么就会显示出最后的效果。</p>
+<p><font color="EE4000">Payload</font><br>Payload即<font color="EE799F">有效载荷</font>，被隐藏并且秘密发送的信息。</p>
+<p><font color="EE4000">Webshell</font><br> WebShell，顾名思义，“web”的含义是显然需要服务器开放WEB服务，“shell”的含义是取得对服务器某种程度上操作权限。黑客在入侵了一个网站后，通常会将这些asp或php后门文件与网站服务器WEB目录下正常的网页文件混在一起，然后就可以使用浏览器来访问这些asp或者php后门，得到一个命令执行环境，以达到控制网站服务器的目的（可以上传下载文件，查看数据库，执行任意程序命令等）。由于webshell其大多是以asp、php、jsp或者cgi等网页文件形式存在的一种命令执行环境，也可以将其称做为一种网页后门。</p>
+<p> <font color="EE4000">木马</font><br> 木马是病毒的一种,分为<font color="EE799F">软件木马</font>和<font color="EE799F">脚本木马</font>，软件木马就是一个恶意控制的软件，脚本木马就是脚本语言编写的木马程序。</p>
+<p> <font color="EE4000">poc</font><br> Prood of concept,即<font color="EE799F">漏洞验证程序</font></p>
+]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>webSec</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>渗透测试之02基础篇</title>
     <url>/2019/10/13/02-sec/</url>
     <content><![CDATA[<h2 id="信息系统安全的定义"><a href="#信息系统安全的定义" class="headerlink" title="信息系统安全的定义"></a>信息系统安全的定义</h2><p>a&gt;<font color="#FF4040"> 机密性(Confidentiality)</font>:对信息或资源的隐藏，信息不被非授权人员所获取，本质上就是不被”非授权人员”读取，也就是<font color="#FF4040">控制”r”权限</font></p><p>b&gt;<font color="#FF4040"> 完整性 （Integrity)</font>：对数据或资源的可信赖程度，通常用于表述防止不当或未经授权的修改，也就是<font color="#FF4040">控制”w”权限</font>,主要是为了阻止未经授权的改写数据企图         </p><a id="more"></a>
