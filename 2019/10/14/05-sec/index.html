@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
+  <meta name="description" content="在开展渗透测试时，需要采用各种可能的方法收集将要攻击的客户组织信息，那么主要收集什么？ Whois信息 注册人名字、邮箱等   IP信息（服务器的IP） 判断是否为CDN节点，查询同IP网站，端口扫描   目录信息 判断WEB应用，获取网站后台目录，获取其他   服务器信息 判断服务，例如：IIS、Apache、Nginx   脚本信息 ASP、PHP、aspx、（asp.net）   框架信息">
 <meta name="keywords" content="webSec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="渗透测试之01基础篇">
-<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/index.html">
+<meta property="og:title" content="渗透测试之05信息收集篇">
+<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/14/05-sec/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
+<meta property="og:description" content="在开展渗透测试时，需要采用各种可能的方法收集将要攻击的客户组织信息，那么主要收集什么？ Whois信息 注册人名字、邮箱等   IP信息（服务器的IP） 判断是否为CDN节点，查询同IP网站，端口扫描   目录信息 判断WEB应用，获取网站后台目录，获取其他   服务器信息 判断服务，例如：IIS、Apache、Nginx   脚本信息 ASP、PHP、aspx、（asp.net）   框架信息">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T12:37:17.277Z">
+<meta property="og:updated_time" content="2019-10-14T13:30:31.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="渗透测试之01基础篇">
-<meta name="twitter:description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
-  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/">
+<meta name="twitter:title" content="渗透测试之05信息收集篇">
+<meta name="twitter:description" content="在开展渗透测试时，需要采用各种可能的方法收集将要攻击的客户组织信息，那么主要收集什么？ Whois信息 注册人名字、邮箱等   IP信息（服务器的IP） 判断是否为CDN节点，查询同IP网站，端口扫描   目录信息 判断WEB应用，获取网站后台目录，获取其他   服务器信息 判断服务，例如：IIS、Apache、Nginx   脚本信息 ASP、PHP、aspx、（asp.net）   框架信息">
+  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/14/05-sec/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>渗透测试之01基础篇 | o7key's blog</title>
+  <title>渗透测试之05信息收集篇 | o7key's blog</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/14/05-sec/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虫 二">
@@ -338,7 +338,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            渗透测试之01基础篇
+            渗透测试之05信息收集篇
             
 
           
@@ -355,7 +355,7 @@
                 
               
 
-              <time title="创建时间：2019-10-13 18:52:37 / 修改时间：20:37:17" itemprop="dateCreated datePublished" datetime="2019-10-13T18:52:37+08:00">2019-10-13</time>
+              <time title="创建时间：2019-10-14 20:50:32 / 修改时间：21:30:31" itemprop="dateCreated datePublished" datetime="2019-10-14T20:50:32+08:00">2019-10-14</time>
             </span>
           
             
@@ -389,7 +389,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>1.4k</span>
+              <span>2.7k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -399,7 +399,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -412,23 +412,158 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="渗透测试的定义："><a href="#渗透测试的定义：" class="headerlink" title="渗透测试的定义："></a>渗透测试的定义：</h2><p>渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。</p><p>注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险</p><p>意义：<br>通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。</p><a id="more"></a>
+        <p>在开展渗透测试时，需要采用各种可能的方法收集将要攻击的客户组织信息，那么主要收集什么？</p><ul>
+<li>Whois信息<ul>
+<li>注册人名字、邮箱等</li>
+</ul>
+</li>
+<li>IP信息（服务器的IP）<ul>
+<li>判断是否为CDN节点，查询同IP网站，端口扫描</li>
+</ul>
+</li>
+<li>目录信息<ul>
+<li>判断WEB应用，获取网站后台目录，获取其他</li>
+</ul>
+</li>
+<li>服务器信息<ul>
+<li>判断服务，例如：IIS、Apache、Nginx</li>
+</ul>
+</li>
+<li>脚本信息<ul>
+<li>ASP、PHP、aspx、（asp.net）</li>
+</ul>
+</li>
+<li>框架信息<ul>
+<li>ThinkPHP、Struts等</li>
+</ul>
+</li>
+<li>应用信息<ul>
+<li>应用，dedecms、phpcms等</li>
+</ul>
+</li>
+<li>子域名信息<ul>
+<li>xxx.xx.com , xxx.xxx.xx.com</li>
+</ul>
+</li>
+</ul><a id="more"></a>
 
+<h3 id="WHOIS"><a href="#WHOIS" class="headerlink" title="WHOIS"></a>WHOIS</h3><p>查询工具：<a href="http://whois.chinaz.com/" target="_blank" rel="noopener">http://whois.chinaz.com</a></p>
+<p>&ensp;</p>
+<h3 id="IP信息"><a href="#IP信息" class="headerlink" title="IP信息"></a>IP信息</h3><p>我们可以ping某个 URL：</p>
+<p>windows下win+r会弹出运行框输入<font color="#FF3E96">cmd</font>（即command）可以进入命令行:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\admin&gt;ping www.xxx.com</span><br></pre></td></tr></table></figure>
 
-<h2 id="渗透测试的分类："><a href="#渗透测试的分类：" class="headerlink" title="渗透测试的分类："></a>渗透测试的分类：</h2><p><strong>（1）黑盒测试</strong><br>定义：渗透测试人员除了知道被测试的目标之外，其余于目标相关的信息一无所知<br>特点：这种类型的渗透测试属于外部渗透测试。在前期需要对目标进行大量的信息收集，耗时较长。但是这种类型的渗透测试更有利于挖掘出系统潜在的漏洞、以及脆弱环节、薄弱点等。</p>
-<p><strong>（2）白盒测试</strong><br>定义：渗透测试人员可以通过正常渠道向被测试单位取得各种资料，包括网络拓扑结构图、员工资料甚至网站程序的代码片段，也可以和单位其他员工进行面对面沟通。<br>特点：这种类型的渗透测试在前期已经对目标系统有了一个初步的了解。这类测试的地点可以分为“从组织内部”与“从组织外部”两种大环境。在这种测试下可以充分发挥<strong>“社会工程学的力量”</strong>，对企业内部雇员的越权操作进行测试。</p>
-<p><strong>（3）灰盒测试</strong><br>定义：灰盒测试介于白盒测试与黑盒测试之间。<br>特点：属于较为隐秘的测试。在测试当中，被测试单位只有少数人知晓测试的存在，因此能够较好的检验单位中的信息安全事件监控、响应等是否到位。</p>
-<h2 id="渗透测试按照测试目标可以分为四类："><a href="#渗透测试按照测试目标可以分为四类：" class="headerlink" title="渗透测试按照测试目标可以分为四类："></a>渗透测试按照测试目标可以分为四类：</h2><p><strong>（1）操作系统渗透</strong><br>Windows、Linux、Solaris、AIX、SCO等</p>
-<p><strong>（2）数据库系统渗透</strong><br>MySQL 、Oracle、MSSQL、sybase、informix</p>
-<p><strong>（3）应用系统渗透</strong><br>由ASP、JSP、PHP等组成的web应用（包括移动应用产品）</p>
-<p><strong>（4）网络设备渗透</strong><br>防火墙、入侵检测系统等</p>
-<h2 id="渗透测试流程："><a href="#渗透测试流程：" class="headerlink" title="渗透测试流程："></a>渗透测试流程：</h2><p><strong>（1）渗透测试目标以及界限的明确</strong><br>在进行渗透测试之前，需要与客户就渗透测试的目标、渗透测试的范围、渗透测试方式（黑盒、白盒、灰盒以及是否涉及社会工程学）进行商讨，达成一致协议，这一点至关重要。</p>
-<p><strong>（2）信息收集</strong><br>在（1）的基础之上，收集与将要进行渗透测试的目标相关的信息，在此过程中可以使用WEB扫描工具以及第三方信息收集工具、搜素引擎（Google）等。<br><font color="red">A： 基础信息获取</font><br>DNS域名信息<br>注册人信息（注册人姓名，电话、邮箱等）<br>网站或程序开发所涉及到的语言(php、jsp、ASP、Ajax、Html、xml等)<br>网站使用的服务器，数据库等信息</p>
-<p><font color="red"> B：WEB扫描信息获取</font><br>开发端口与服务识别<br>服务器操作系统类型<br>目标网络结构…等等</p>
-<p><strong>（3）威胁建模</strong><br>根据（2）中收集到的信息，对测试目标进行威胁建模，查找与渗透测试目标所开启的服务、开放的端口、使用的服务器、域名、编程逻辑、编程语言等等信息中存在的可利用漏洞信息，并且制定渗透测试方案。</p>
-<p><strong>（4）前期渗透测试</strong><br>根据（3）中制定的渗透测试方案开始渗透测试<strong>（注意前期商议的渗透测试界线范围）</strong></p>
-<p><strong>（5）后渗透测试</strong><br>后渗透测试主要是在前期渗透测试的基础上扩大影响范围、提高权限、建立维持访问、清理痕迹等。后渗透测试在整个渗透测试中相当重要。</p>
-<p><strong>（6）渗透测试报告书写</strong><br>在这个过程中，需要将系统中所存在的漏洞、漏洞的证明、系统潜在的安全威胁、针对安全威胁给出的修复建议等给出详细的说明。</p>
+<p>​    ping完之后判断是否为CDN的ip,可以使用<a href="http://ping.chinaz.com/" target="_blank" rel="noopener">多地ping工具</a>来进行判断。一般来说，使用了CDN的网站在不同地点的Ping的结果是不一样的。</p>
+<p><strong>查找源站<code>IP</code></strong></p>
+<ol>
+<li>查询子域：许多情况下只有主站使用了CDN，二级站点并没有，所以我们就可以直接查询分站的 IP。分站的搜索方法见下文。</li>
+<li>国内部分CDN服务只针对国内有效，对国外的访问几乎不使用CDN。所以我们可以通过国外冷门DNS 查询域名。</li>
+</ol>
+<h4 id="nslookup"><a href="#nslookup" class="headerlink" title="nslookup"></a>nslookup</h4><p>nslookup用于查询DNS的记录，查询域名解析是否正常，在网络故障时用来诊断网络问题。</p>
+<p>使用方式：</p>
+<ul>
+<li>直接查询</li>
+</ul>
+<p>nslookup domain [dns-server]<br> 如果没有指定dns服务器，就采用系统默认的dns服务器。</p>
+<p>例如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup xxx.com</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>b. 查询其他记录</li>
+</ul>
+<p>nslookup -qt = <font color="#FF1493">type</font> domain [dns-server] </p>
+<p><font color="#FF1493">type</font> :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">A 	--&gt;地址记录</span><br><span class="line">AAAA    --&gt;地址记录</span><br><span class="line">AFSDB Andrew   --&gt;文件系统数据库服务器记录</span><br><span class="line">ATMA 	--&gt;ATM地址记录</span><br><span class="line">CNAME   --&gt;别名记录</span><br><span class="line">HINHO   --&gt;硬件配置记录，包括CPU、操作系统信息 </span><br><span class="line">ISDN    --&gt;域名对应的ISDN号码</span><br><span class="line">MB      --&gt;存放指定邮箱的服务器</span><br><span class="line">MG      --&gt;邮件组记录</span><br><span class="line">MINFO   --&gt;邮件组和邮箱的信息记录</span><br><span class="line">MR      --&gt;改名的邮箱记录</span><br><span class="line">MX      --&gt;邮件服务器记录</span><br><span class="line">NS     --&gt; 名字服务器记录</span><br><span class="line">PTR    -&gt;反向记录</span><br><span class="line">RP     --&gt;负责人记录</span><br><span class="line">RT     --&gt;路由穿透记录</span><br><span class="line">SRV    --&gt;TCP服务器信息记录</span><br><span class="line">TXT    --&gt;域名对应的文本信息</span><br><span class="line">X25    --&gt;域名对应的X.25地址记录</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查询更具体的信息</li>
+</ul>
+<p>nslookup -d [其他参数] domain [dns-server]<br>只要在查询的时候，加上-d参数，即可查询域名的缓存</p>
+<ol start="3">
+<li>历史解析记录：CDN的IP地址之前所用的IP就是真实IP。</li>
+</ol>
+<p>历史解析记录使用工具：<a href="http://toolbar.netcraft.com/site_report?url=" target="_blank" rel="noopener">http://toolbar.netcraft.com/site_report?url=</a></p>
+<ol start="4">
+<li>查询邮件：很多服务器自带邮件发送功能，可以利用它来获取真实IP。让站点主动发送邮件，然后右键查询源代码，就能获得真实IP。</li>
+</ol>
+<p>工具检测旁站工具：<a href="http://tool.chinaz.com/same/。" target="_blank" rel="noopener">http://tool.chinaz.com/same/。</a></p>
+<ol start="5">
+<li>端口扫描可以使用Nmap工具,下载：<a href="https://nmap.org/" target="_blank" rel="noopener">https://nmap.org/</a></li>
+</ol>
+<h3 id="目录信息"><a href="#目录信息" class="headerlink" title="目录信息"></a>目录信息</h3><h4 id="1-主动式扫描：爬虫、暴力破解"><a href="#1-主动式扫描：爬虫、暴力破解" class="headerlink" title="1. 主动式扫描：爬虫、暴力破解"></a>1. 主动式扫描：爬虫、暴力破解</h4><ul>
+<li><p>AVWS：(Acunetix Web Vulnerability Scanner)是一个网站及服务器漏洞扫描软件，根据站点的链接进行扫描</p>
+</li>
+<li><p><a href="http://www.jb51.net/softs/43405.html" target="_blank" rel="noopener">御剑</a>：根据固定的字典进行主动式扫描</p>
+</li>
+</ul>
+<h4 id="2-被动式扫描：Burp-Spider"><a href="#2-被动式扫描：Burp-Spider" class="headerlink" title="2. 被动式扫描：Burp Spider"></a>2. 被动式扫描：Burp Spider</h4><h4 id="3-Google-Hacking-谷歌黑语法"><a href="#3-Google-Hacking-谷歌黑语法" class="headerlink" title="3. Google Hacking(谷歌黑语法)"></a>3. Google Hacking(谷歌黑语法)</h4><ul>
+<li><p>site：搜索与指定网站有联系的 URL</p>
+</li>
+<li><p>intitle：搜索网页标题中包含有特定字符的网页</p>
+</li>
+<li><p>inurl：搜索包含有特定字符的 URL</p>
+</li>
+<li><p>Info:    搜索 一些基本信息</p>
+</li>
+<li><p>intext：搜索网页正文内容中的指定字符</p>
+</li>
+<li><p>filetype：搜索指定类型的文件</p>
+<p>补充：</p>
+<p>a&gt; 双引号</p>
+<p>把搜索词放在双引号中，代表<strong>完全匹配搜索</strong>也就是说搜索结果返回的页面包含双引号中出现的所有的词，连顺序也必须完全匹配。百度和Google 都支持这个指令。例如搜索： “WEB安全”</p>
+<p>b&gt; 减号</p>
+<p>减号<strong>代表搜索不包含减号后面的词的页面。</strong>使用这个指令时减号前面必须是空格，减号后面没有空格，紧跟着需要排除的词。Google 和百度都支持这个指令。<br>例如：搜索 -引擎<br>返回的则是包含“搜索”这个词，却不包含“引擎”这个词的结果</p>
+<p>c&gt;  星号</p>
+<p>星号<em>是常用的通配符，也可以用在搜索中。百度不支持</em>号搜索指令</p>
+<p>d&gt;  一些示例</p>
+</li>
+</ul>
+<ol>
+<li><p>查询存在<code>SQL</code>注入漏洞的网站：</p>
+<p><font color="red">inurl:asp?id=</font></p>
+</li>
+<li><p>搜索开放远程桌面的WEB连接的服务器</p>
+<p><font color="red">allinurl:tsweb/default.htmsite:com</font></p>
+</li>
+<li><p>搜索网站的公共FTP用户</p>
+<p>site:XXX.com   intext:ftp://:</p>
+</li>
+<li><p>搜索指定网站的Google快照</p>
+<p><font color="red">Cache:xxx.com</font></p>
+</li>
+<li><p>收集Discuz论坛主机</p>
+<p>Intext：Poweredby  Discuz</p>
+</li>
+</ol>
+<h4 id="4-robots-txt"><a href="#4-robots-txt" class="headerlink" title="4. robots.txt"></a>4. robots.txt</h4><p>打开浏览器，在输入框输入<a href="http://www.xxx.com/robots.txt" target="_blank" rel="noopener">www.xxx.com/robots.txt</a>, 重点要看<font color="#EE2C2C">Disallow</font>的部分。</p>
+<h4 id="5-联网设备搜索"><a href="#5-联网设备搜索" class="headerlink" title="5. 联网设备搜索"></a>5. 联网设备搜索</h4><ul>
+<li><p>钟馗之眼<a href="http://www.zoomeye.com" target="_blank" rel="noopener">www.zoomeye.com</a></p>
+</li>
+<li><p>傻蛋<a href="http://www.oshadan.com。" target="_blank" rel="noopener">www.oshadan.com。</a></p>
+</li>
+</ul>
+<p>联网设备搜索引擎可以检索到许多搜索引擎不收录的页面，通常是后台等页面。</p>
+<p>构造检索关键词时：</p>
+<ul>
+<li><p>系统/后台类，可以搜索“xxx系统/平台/管理”。</p>
+</li>
+<li><p>企业类，可以搜索“xxx企业/公司/平台”。</p>
+</li>
+</ul>
+<h3 id="服务器信息"><a href="#服务器信息" class="headerlink" title="服务器信息"></a>服务器信息</h3><p>主要查看返回的数据包的<font color="#EE2C2C">Server</font>的内容，获取Server信息,通过Sever字段可以判断使用的服务器类型。</p>
+<h3 id="脚本信息"><a href="#脚本信息" class="headerlink" title="脚本信息"></a>脚本信息</h3><ol>
+<li>查看返回的数据包中的<font color="#EE2C2C">X-Powered-By</font>的值。</li>
+<li>查看返回的数据包中的<font color="#EE2C2C">cookie</font>中的信息</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PHPSESSID</span><br><span class="line">ASPSESSID</span><br></pre></td></tr></table></figure>
+
+<p>如：出现了PHPSESSID，说明站点可能使用了PHP编写</p>
+<h3 id="框架信息"><a href="#框架信息" class="headerlink" title="框架信息"></a>框架信息</h3><p>通过报错信息或是URL结构获取网站使用的框架信息。如ThinkPHP，Struts等。</p>
+<h3 id="应用信息"><a href="#应用信息" class="headerlink" title="应用信息"></a>应用信息</h3><p>目录特征、文件特征、指纹扫描工具、网站特征等。</p>
+<p>比如存在wp-login.php就可能是WordPress。</p>
+<h3 id="子域名信息"><a href="#子域名信息" class="headerlink" title="子域名信息"></a>子域名信息</h3><ul>
+<li>搜索引擎：site:*.xxx.com</li>
+</ul>
 
     </div>
 
@@ -446,7 +581,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/" title="渗透测试之01基础篇">https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/</a>
+    <a href="https://github.com/o7key/o7key.github.io/2019/10/14/05-sec/" title="渗透测试之05信息收集篇">https://github.com/o7key/o7key.github.io/2019/10/14/05-sec/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -484,14 +619,18 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/10/14/04-sec/" rel="next" title="渗透测试之04基础篇">
+                  <i class="fa fa-chevron-left"></i> 渗透测试之04基础篇
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/10/13/02-sec/" rel="prev" title="渗透测试之02基础篇">
-                  渗透测试之02基础篇 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/10/14/06-sec/" rel="prev" title="渗透测试之万能密码原理">
+                  渗透测试之万能密码原理 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -645,7 +784,7 @@
         
 
         
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试的定义："><span class="nav-number">1.</span> <span class="nav-text">渗透测试的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试的分类："><span class="nav-number">2.</span> <span class="nav-text">渗透测试的分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试按照测试目标可以分为四类："><span class="nav-number">3.</span> <span class="nav-text">渗透测试按照测试目标可以分为四类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试流程："><span class="nav-number">4.</span> <span class="nav-text">渗透测试流程：</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#WHOIS"><span class="nav-number">1.</span> <span class="nav-text">WHOIS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP信息"><span class="nav-number">2.</span> <span class="nav-text">IP信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nslookup"><span class="nav-number">2.1.</span> <span class="nav-text">nslookup</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录信息"><span class="nav-number">3.</span> <span class="nav-text">目录信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-主动式扫描：爬虫、暴力破解"><span class="nav-number">3.1.</span> <span class="nav-text">1. 主动式扫描：爬虫、暴力破解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-被动式扫描：Burp-Spider"><span class="nav-number">3.2.</span> <span class="nav-text">2. 被动式扫描：Burp Spider</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Google-Hacking-谷歌黑语法"><span class="nav-number">3.3.</span> <span class="nav-text">3. Google Hacking(谷歌黑语法)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-robots-txt"><span class="nav-number">3.4.</span> <span class="nav-text">4. robots.txt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-联网设备搜索"><span class="nav-number">3.5.</span> <span class="nav-text">5. 联网设备搜索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器信息"><span class="nav-number">4.</span> <span class="nav-text">服务器信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本信息"><span class="nav-number">5.</span> <span class="nav-text">脚本信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架信息"><span class="nav-number">6.</span> <span class="nav-text">框架信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用信息"><span class="nav-number">7.</span> <span class="nav-text">应用信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子域名信息"><span class="nav-number">8.</span> <span class="nav-text">子域名信息</span></a></li></ol></div>
         
         </div>
     </div>

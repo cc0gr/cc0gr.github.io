@@ -55,17 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="C/C++">
-<meta property="og:type" content="website">
-<meta property="og:title" content="o7key&#39;s blog">
-<meta property="og:url" content="https://github.com/o7key/o7key.github.io/tags/webSec/index.html">
+  <meta name="description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
+<meta name="keywords" content="webSec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="渗透测试之万能密码原理">
+<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="C/C++">
+<meta property="og:description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-14T13:39:07.613Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="o7key&#39;s blog">
-<meta name="twitter:description" content="C/C++">
-  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/tags/webSec/">
+<meta name="twitter:title" content="渗透测试之万能密码原理">
+<meta name="twitter:description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
+  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/">
 
 
 <script id="page-configurations">
@@ -73,13 +75,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: webSec | o7key's blog</title>
+  <title>渗透测试之万能密码原理 | o7key's blog</title>
   
 
 
@@ -314,227 +316,207 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">webSec
-          <small>标签</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虫 二">
+      <meta itemprop="description" content="C/C++">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="o7key's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            渗透测试之万能密码原理
+            
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-14 21:30:56 / 修改时间：21:39:07" itemprop="dateCreated datePublished" datetime="2019-10-14T21:30:56+08:00">2019-10-14</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>862</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。</p><ol>
+<li><p>万能密码：用户名 admin、密码admin，用户名admin、密码123456</p>
+</li>
+<li><p>万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’<br>&nbsp;&nbsp;原理解释：假设用户登录对应的语句为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span> <span class="keyword">and</span> pwd=<span class="string">''</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol><a id="more"></a>
+
+<p>如果用户名输入正确则直接登录，否则提示用户名或密码错误，使用万能密码后的SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="keyword">or</span><span class="string">''</span> <span class="keyword">and</span> pwd=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="keyword">or</span><span class="string">''</span>;'</span><br></pre></td></tr></table></figure>
+
+<p>核心代码，两个单引号匹配，即name=’’，然后or连接，单引号等于单引号(‘=’)这是恒成立的，紧接着or连接两个单引号(‘’)，同理密码pwd。这样or连接的(‘=’)是恒成立的，故返回结果为真，导致直接登录。</p>
+<ol start="3">
+<li><p>万能密码：用户名 ‘or’’=’、密码’or’’=’<br>&nbsp;&nbsp;原理解释：此时对应的SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, pwd from login where name=''or''='' and pwd=''or''='';'</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>万能密码：用户名’or’=’–、密码’or’=’–<br>原理解释：此时对应的SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="comment">--' and pwd=''or'='--';</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>通过搜索引擎输入 inurl:login.asp等搜索技术找到一些列网站后台登录界面后，反复尝试这些万能密码进行登录。防范措施也比较简单：</p>
+<ol>
+<li>开发人员开发完成后，过滤掉admin等常用账号或修改密码；</li>
+<li>当用户第一次登录的时候，对简单的密码进行修改提示，防止暴力破解；</li>
+<li>用户名或密码屏蔽掉单引号(‘)、等号(=)、注释(–)等特殊字符；</li>
+<li>对尝试SQL注入的IP地址进行报警提示或日志记录。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>虫 二
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/" title="渗透测试之万能密码原理">https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
       
 
-  
-  
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags" id="post-tags">
+            
+                <a href="/tags/webSec/" rel="tag"><i class="fa fa-tag"></i> webSec</a>
+            
+          </div>
+          <script type="text/javascript">
+          var tagsall=document.getElementsByClassName("post-tags")
+          for (var i = tagsall.length - 1; i >= 0; i--){
+              var tags=tagsall[i].getElementsByTagName("a");
+              for (var j = tags.length - 1; j >= 0; j--) {
+                  var r=Math.floor(Math.random()*75+130);
+                  var g=Math.floor(Math.random()*75+100);
+                  var b=Math.floor(Math.random()*75+80);
+                  tags[j].style.background = "rgb("+r+","+g+","+b+")";
+              }
+          }
+        </script>
+        
 
-  
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/14/05-sec/" rel="next" title="渗透测试之05信息收集篇">
+                  <i class="fa fa-chevron-left"></i> 渗透测试之05信息收集篇
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-14T21:30:56+08:00"
-              content="2019-10-14">
-          10-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/14/06-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之万能密码原理</span>
-          </a>
-        
-      </h2>
-
-    </header>
   </article>
-
-
-
+  
   
   
 
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-14T20:50:32+08:00"
-              content="2019-10-14">
-          10-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/14/05-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之05信息收集篇</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-14T20:40:33+08:00"
-              content="2019-10-14">
-          10-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/14/04-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之04基础篇</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-13T19:53:57+08:00"
-              content="2019-10-13">
-          10-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/13/03-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之03基础篇</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-13T19:26:55+08:00"
-              content="2019-10-13">
-          10-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/13/02-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之02基础篇</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-13T18:52:37+08:00"
-              content="2019-10-13">
-          10-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/13/01-sec/" itemprop="url">
-            <span itemprop="name">渗透测试之01基础篇</span>
-          </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
