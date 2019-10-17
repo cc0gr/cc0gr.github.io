@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="&amp;#x4E07;&amp;#x80FD;&amp;#x5BC6;&amp;#x7801;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x6307;&amp;#x5F00;&amp;#x53D1;&amp;#x4EBA;&amp;#x5458;&amp;#x5728;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x7EA7;&amp;#x7BA1;&amp;#x7406;&amp;#x5458;">
+  <meta name="description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
 <meta name="keywords" content="webSec">
 <meta property="og:type" content="article">
 <meta property="og:title" content="渗透测试之万能密码原理">
 <meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="&amp;#x4E07;&amp;#x80FD;&amp;#x5BC6;&amp;#x7801;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x6307;&amp;#x5F00;&amp;#x53D1;&amp;#x4EBA;&amp;#x5458;&amp;#x5728;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x7EA7;&amp;#x7BA1;&amp;#x7406;&amp;#x5458;">
+<meta property="og:description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-10-14T13:39:07.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="渗透测试之万能密码原理">
-<meta name="twitter:description" content="&amp;#x4E07;&amp;#x80FD;&amp;#x5BC6;&amp;#x7801;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x6307;&amp;#x5F00;&amp;#x53D1;&amp;#x4EBA;&amp;#x5458;&amp;#x5728;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x8D85;&amp;#x7EA7;&amp;#x7BA1;&amp;#x7406;&amp;#x5458;">
+<meta name="twitter:description" content="万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。 万能密码：用户名 admin、密码admin，用户名admin、密码123456  万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’&amp;nbsp;&amp;nbsp;原理解释：假设用户登录对应的语句为： 1select name, pwd from logi">
   <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/14/06-sec/">
 
 
@@ -238,7 +238,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
       
@@ -347,23 +347,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-14 21:30:56 / 修改时间：21:39:07" itemprop="dateCreated datePublished" datetime="2019-10-14T21:30:56+08:00">2019-10-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -412,36 +395,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#x901A;&#x5E38;&#x662F;&#x6307;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x540E;&#x6CA1;&#x6709;&#x8FC7;&#x6EE4;&#x6389;&#x8FD9;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#xFF1B;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x5B58;&#x5728;SQL&#x6F0F;&#x6D1E;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x3002;</p><a id="more"></a>
-<ol>
-<li><p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#xFF1A;&#x7528;&#x6237;&#x540D; admin&#x3001;&#x5BC6;&#x7801;admin&#xFF0C;&#x7528;&#x6237;&#x540D;admin&#x3001;&#x5BC6;&#x7801;123456</p>
+        <p>万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。</p><ol>
+<li><p>万能密码：用户名 admin、密码admin，用户名admin、密码123456</p>
 </li>
-<li><p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#xFF1A;&#x7528;&#x6237;&#x540D; &#x2018;or&#x2019;=&#x2019;or&#x2019;&#x3001;&#x5BC6;&#x7801; &#x2018;or&#x2019;=&#x2019;or&#x2019;<br>&#xA0;&#xA0;&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;&#x5047;&#x8BBE;&#x7528;&#x6237;&#x767B;&#x5F55;&#x5BF9;&#x5E94;&#x7684;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">&apos;&apos;</span> <span class="keyword">and</span> pwd=<span class="string">&apos;&apos;</span>;</span><br></pre></td></tr></table></figure>
+<li><p>万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’<br>&nbsp;&nbsp;原理解释：假设用户登录对应的语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span> <span class="keyword">and</span> pwd=<span class="string">''</span>;</span><br></pre></td></tr></tbody></table></figure>
 
 </li>
-</ol>
-<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x540D;&#x8F93;&#x5165;&#x6B63;&#x786E;&#x5219;&#x76F4;&#x63A5;&#x767B;&#x5F55;&#xFF0C;&#x5426;&#x5219;&#x63D0;&#x793A;&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#xFF0C;&#x4F7F;&#x7528;&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#x540E;&#x7684;SQL&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">&apos;&apos;</span><span class="keyword">or</span><span class="string">&apos;=&apos;</span><span class="keyword">or</span><span class="string">&apos;&apos;</span> <span class="keyword">and</span> pwd=<span class="string">&apos;&apos;</span><span class="keyword">or</span><span class="string">&apos;=&apos;</span><span class="keyword">or</span><span class="string">&apos;&apos;</span>;&apos;</span><br></pre></td></tr></table></figure>
+</ol><a id="more"></a>
 
-<p>&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#xFF0C;&#x4E24;&#x4E2A;&#x5355;&#x5F15;&#x53F7;&#x5339;&#x914D;&#xFF0C;&#x5373;name=&#x2019;&#x2019;&#xFF0C;&#x7136;&#x540E;or&#x8FDE;&#x63A5;&#xFF0C;&#x5355;&#x5F15;&#x53F7;&#x7B49;&#x4E8E;&#x5355;&#x5F15;&#x53F7;(&#x2018;=&#x2019;)&#x8FD9;&#x662F;&#x6052;&#x6210;&#x7ACB;&#x7684;&#xFF0C;&#x7D27;&#x63A5;&#x7740;or&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x5355;&#x5F15;&#x53F7;(&#x2018;&#x2019;)&#xFF0C;&#x540C;&#x7406;&#x5BC6;&#x7801;pwd&#x3002;&#x8FD9;&#x6837;or&#x8FDE;&#x63A5;&#x7684;(&#x2018;=&#x2019;)&#x662F;&#x6052;&#x6210;&#x7ACB;&#x7684;&#xFF0C;&#x6545;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x771F;&#xFF0C;&#x5BFC;&#x81F4;&#x76F4;&#x63A5;&#x767B;&#x5F55;&#x3002;</p>
+<p>如果用户名输入正确则直接登录，否则提示用户名或密码错误，使用万能密码后的SQL语句如下：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="keyword">or</span><span class="string">''</span> <span class="keyword">and</span> pwd=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="keyword">or</span><span class="string">''</span>;'</span><br></pre></td></tr></tbody></table></figure>
+
+<p>核心代码，两个单引号匹配，即name=’’，然后or连接，单引号等于单引号(‘=’)这是恒成立的，紧接着or连接两个单引号(‘’)，同理密码pwd。这样or连接的(‘=’)是恒成立的，故返回结果为真，导致直接登录。</p>
 <ol start="3">
-<li><p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#xFF1A;&#x7528;&#x6237;&#x540D; &#x2018;or&#x2019;&#x2019;=&#x2019;&#x3001;&#x5BC6;&#x7801;&#x2019;or&#x2019;&#x2019;=&#x2019;<br>&#xA0;&#xA0;&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;&#x6B64;&#x65F6;&#x5BF9;&#x5E94;&#x7684;SQL&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, pwd from login where name=&apos;&apos;or&apos;&apos;=&apos;&apos; and pwd=&apos;&apos;or&apos;&apos;=&apos;&apos;;&apos;</span><br></pre></td></tr></table></figure>
+<li><p>万能密码：用户名 ‘or’’=’、密码’or’’=’<br>&nbsp;&nbsp;原理解释：此时对应的SQL语句如下：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">, pwd from login where name=''or''='' and pwd=''or''='';'</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#xFF1A;&#x7528;&#x6237;&#x540D;&#x2019;or&#x2019;=&#x2019;&#x2013;&#x3001;&#x5BC6;&#x7801;&#x2019;or&#x2019;=&#x2019;&#x2013;<br>&#x539F;&#x7406;&#x89E3;&#x91CA;&#xFF1A;&#x6B64;&#x65F6;&#x5BF9;&#x5E94;&#x7684;SQL&#x8BED;&#x53E5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">&apos;&apos;</span><span class="keyword">or</span><span class="string">&apos;=&apos;</span><span class="comment">--&apos; and pwd=&apos;&apos;or&apos;=&apos;--&apos;;</span></span><br></pre></td></tr></table></figure>
+<li><p>万能密码：用户名’or’=’–、密码’or’=’–<br>原理解释：此时对应的SQL语句如下：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span><span class="keyword">or</span><span class="string">'='</span><span class="comment">--' and pwd=''or'='--';</span></span><br></pre></td></tr></tbody></table></figure>
 
 </li>
 </ol>
-<p>&#x901A;&#x8FC7;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x8F93;&#x5165; inurl:login.asp&#x7B49;&#x641C;&#x7D22;&#x6280;&#x672F;&#x627E;&#x5230;&#x4E00;&#x4E9B;&#x5217;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x767B;&#x5F55;&#x754C;&#x9762;&#x540E;&#xFF0C;&#x53CD;&#x590D;&#x5C1D;&#x8BD5;&#x8FD9;&#x4E9B;&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x767B;&#x5F55;&#x3002;&#x9632;&#x8303;&#x63AA;&#x65BD;&#x4E5F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF1A;</p>
+<p>通过搜索引擎输入 inurl:login.asp等搜索技术找到一些列网站后台登录界面后，反复尝试这些万能密码进行登录。防范措施也比较简单：</p>
 <ol>
-<li>&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8FC7;&#x6EE4;&#x6389;admin&#x7B49;&#x5E38;&#x7528;&#x8D26;&#x53F7;&#x6216;&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#xFF1B;</li>
-<li>&#x5F53;&#x7528;&#x6237;&#x7B2C;&#x4E00;&#x6B21;&#x767B;&#x5F55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x7B80;&#x5355;&#x7684;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x63D0;&#x793A;&#xFF0C;&#x9632;&#x6B62;&#x66B4;&#x529B;&#x7834;&#x89E3;&#xFF1B;</li>
-<li>&#x7528;&#x6237;&#x540D;&#x6216;&#x5BC6;&#x7801;&#x5C4F;&#x853D;&#x6389;&#x5355;&#x5F15;&#x53F7;(&#x2018;)&#x3001;&#x7B49;&#x53F7;(=)&#x3001;&#x6CE8;&#x91CA;(&#x2013;)&#x7B49;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF1B;</li>
-<li>&#x5BF9;&#x5C1D;&#x8BD5;SQL&#x6CE8;&#x5165;&#x7684;IP&#x5730;&#x5740;&#x8FDB;&#x884C;&#x62A5;&#x8B66;&#x63D0;&#x793A;&#x6216;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x3002;</li>
+<li>开发人员开发完成后，过滤掉admin等常用账号或修改密码；</li>
+<li>当用户第一次登录的时候，对简单的密码进行修改提示，防止暴力破解；</li>
+<li>用户名或密码屏蔽掉单引号(‘)、等号(=)、注释(–)等特殊字符；</li>
+<li>对尝试SQL注入的IP地址进行报警提示或日志记录。</li>
 </ol>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     </div>
 
     
@@ -492,6 +493,12 @@
         
 
         
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  
+  </div>
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
@@ -553,7 +560,7 @@
             
                 <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
             </a>
             </div>
@@ -658,7 +665,7 @@
     <span>分类</span>
     </div>
     <div>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul> 
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">2</span></li></ul> 
     </div>
 </div>
 
@@ -687,19 +694,19 @@
   &copy; 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">虫 二</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">13k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">12 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
 </div>
 
         
@@ -737,6 +744,26 @@
 
 
 
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: ,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
 
 
 

@@ -236,7 +236,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">8</span></a>
 
   </li>
       
@@ -322,6 +322,126 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/17/observer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虫 二">
+      <meta itemprop="description" content="C/C++">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="o7key's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/17/observer/" class="post-title-link" itemprop="url">设计模式之观察者模式</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>3.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="设计模式之观察者模式-c"><a href="#设计模式之观察者模式-c" class="headerlink" title="设计模式之观察者模式-c++"></a>设计模式之观察者模式-c++</h1><p>定义了对象间的一对多的依赖关系，让多个观察者对象同时监听某一个主题对象（被观察者）。当主题对象的状态发生更改时，会通知所有观察者，让它们能够自动更新。也称之为发布(Publish)-订阅(Subscribe)模式。</p><p>Subject（抽象主题）：跟踪所有观察者，并提供添加和删除观察者的接口。<br>Observer（抽象观察者）：为所有的具体观察者定义一个接口，在得到主题的通知时进行自我更新。<br>ConcreteSubject（具体主题）：将有关状态存入各 ConcreteObserver 对象。当具体主题的状态发生任何更改时，通知所有观察者。<br>ConcreteObserver（具体观察者）：实现 Observer 所要求的更新接口，以便使本身的状态与主题的状态相协调。</p>
+          
+          <div class="home-post-tags">
+            
+            <a href="/tags/c-设计模式/" rel="tag">c++设计模式</a>
+            
+            <script type="text/javascript">
+                var tagsall=document.getElementsByClassName("home-post-tags")
+                    for (var i = tagsall.length - 1; i >= 0; i--){
+                    var tags=tagsall[i].getElementsByTagName("a");
+                        for (var j = tags.length - 1; j >= 0; j--) {
+                            var r=Math.floor(Math.random()*255);
+                            var g=Math.floor(Math.random()*255);
+                            var b=Math.floor(Math.random()*255);
+                            tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }
+            </script>
+         </div>
+           
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/17/observer/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/16/Singleton/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -342,23 +462,6 @@
         </h1>
 
         <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-16 21:54:32 / 修改时间：22:06:07" itemprop="dateCreated datePublished" datetime="2019-10-16T21:54:32+08:00">2019-10-16</time>
-            </span>
-          
-            
-
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -409,7 +512,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E4B;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;-c"><a href="#&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E4B;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;-c" class="headerlink" title="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E4B;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;-c++"></a>&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x4E4B;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;-c++</h1><p>&#x529F;&#x80FD;&#xFF1A;</p><p>&#x200B;        &#x5728;&#x6574;&#x4E2A;&#x8F6F;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;&#x5B83;&#x7684;&#x5168;&#x5C40;&#x8BBF;&#x95EE;&#x70B9;&#xFF0C;&#x5173;&#x952E;&#x662F;&#x6784;&#x9020;&#x51FD;&#x6570;&#x79C1;&#x6709;&#x5316;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x591A;&#x6B21;&#x6784;&#x9020;</p>
+          <h1 id="设计模式之单例模式-c"><a href="#设计模式之单例模式-c" class="headerlink" title="设计模式之单例模式-c++"></a>设计模式之单例模式-c++</h1><p>功能：</p><p>​        在整个软件生命周期，保证一个类只有一个实例，并提供一个访问它的全局访问点，关键是构造函数私有化，不允许多次构造</p><p>单例模式分两种：</p><ol>
+<li><p>饿汉模式：不管程序有没有用到这个实例，都会进行构造处理，是一种空间换时间的做法。</p>
+</li>
+<li><p>懒汉模式：只有程序想要使用这个实例的时候才会去创建，不需要创建实例程序就“懒得”去创建实例。</p>
+</li>
+</ol>
           
           <div class="home-post-tags">
             
@@ -481,23 +589,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-14 21:30:56 / 修改时间：21:39:07" itemprop="dateCreated datePublished" datetime="2019-10-14T21:30:56+08:00">2019-10-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -546,7 +637,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>&#x4E07;&#x80FD;&#x5BC6;&#x7801;&#x901A;&#x5E38;&#x662F;&#x6307;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x540E;&#x6CA1;&#x6709;&#x8FC7;&#x6EE4;&#x6389;&#x8FD9;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#xFF1B;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x5B58;&#x5728;SQL&#x6F0F;&#x6D1E;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x3002;</p>
+          <p>万能密码通常是指开发人员在开发过程中使用超级管理员进行开发，开发完成后没有过滤掉这些常用的超级管理员；另一种是存在SQL漏洞管理员账号。</p><ol>
+<li><p>万能密码：用户名 admin、密码admin，用户名admin、密码123456</p>
+</li>
+<li><p>万能密码：用户名 ‘or’=’or’、密码 ‘or’=’or’<br>&nbsp;&nbsp;原理解释：假设用户登录对应的语句为：</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, pwd <span class="keyword">from</span> login <span class="keyword">where</span> <span class="keyword">name</span>=<span class="string">''</span> <span class="keyword">and</span> pwd=<span class="string">''</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
           
           <div class="home-post-tags">
             
@@ -618,23 +716,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-14 20:50:32 / 修改时间：21:30:31" itemprop="dateCreated datePublished" datetime="2019-10-14T20:50:32+08:00">2019-10-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -683,7 +764,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>&#x5728;&#x5F00;&#x5C55;&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x91C7;&#x7528;&#x5404;&#x79CD;&#x53EF;&#x80FD;&#x7684;&#x65B9;&#x6CD5;&#x6536;&#x96C6;&#x5C06;&#x8981;&#x653B;&#x51FB;&#x7684;&#x5BA2;&#x6237;&#x7EC4;&#x7EC7;&#x4FE1;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x4E3B;&#x8981;&#x6536;&#x96C6;&#x4EC0;&#x4E48;&#xFF1F;</p>
+          <p>在开展渗透测试时，需要采用各种可能的方法收集将要攻击的客户组织信息，那么主要收集什么？</p><ul>
+<li>Whois信息<ul>
+<li>注册人名字、邮箱等</li>
+</ul>
+</li>
+<li>IP信息（服务器的IP）<ul>
+<li>判断是否为CDN节点，查询同IP网站，端口扫描</li>
+</ul>
+</li>
+<li>目录信息<ul>
+<li>判断WEB应用，获取网站后台目录，获取其他</li>
+</ul>
+</li>
+<li>服务器信息<ul>
+<li>判断服务，例如：IIS、Apache、Nginx</li>
+</ul>
+</li>
+<li>脚本信息<ul>
+<li>ASP、PHP、aspx、（asp.net）</li>
+</ul>
+</li>
+<li>框架信息<ul>
+<li>ThinkPHP、Struts等</li>
+</ul>
+</li>
+<li>应用信息<ul>
+<li>应用，dedecms、phpcms等</li>
+</ul>
+</li>
+<li>子域名信息<ul>
+<li>xxx.xx.com , xxx.xxx.xx.com</li>
+</ul>
+</li>
+</ul>
           
           <div class="home-post-tags">
             
@@ -755,23 +869,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-14 20:40:33 / 修改时间：20:58:55" itemprop="dateCreated datePublished" datetime="2019-10-14T20:40:33+08:00">2019-10-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -820,7 +917,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="&#x7F51;&#x7EDC;&#x653B;&#x9632;&#x73AF;&#x5883;"><a href="#&#x7F51;&#x7EDC;&#x653B;&#x9632;&#x73AF;&#x5883;" class="headerlink" title="&#x7F51;&#x7EDC;&#x653B;&#x9632;&#x73AF;&#x5883;"></a>&#x7F51;&#x7EDC;&#x653B;&#x9632;&#x73AF;&#x5883;</h2><p>&#xA0;&#xA0;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x7F51;&#x7EDC;&#x653B;&#x9632;&#x5B9E;&#x9A8C;&#x73AF;&#x5883;&#x5305;&#x62EC;&#xFF1A;<font color="#FF4040">&#x9776;&#x673A;</font>&#x3001;<font color="#FF4040">&#x653B;&#x51FB;&#x673A;</font>&#x3001;<font color="#FF4040">&#x5165;&#x4FB5;&#x68C0;&#x6D4B;&#x5206;&#x6790;&#x7CFB;&#x7EDF;</font>&#x3001;<font color="#FF4040">&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;</font>&#x56DB;&#x90E8;&#x5206;&#x7EC4;&#x6210;</p>
+          <h2 id="网络攻防环境"><a href="#网络攻防环境" class="headerlink" title="网络攻防环境"></a>网络攻防环境</h2><p>&nbsp;&nbsp;一个基本的网络攻防实验环境包括：<font color="#FF4040">靶机</font>、<font color="#FF4040">攻击机</font>、<font color="#FF4040">入侵检测分析系统</font>、<font color="#FF4040">网络连接</font>四部分组成</p><p><font color="#FF3030">靶机</font>：包含系统和应用程序漏洞，并且作为攻击目标的主机。</p><p><font color="#FF3030">攻击机：用于发起网络攻击的主机,可以使用kali,一个渗透测试人员专用平台</font></p><p><font color="#FF3030">攻击检测、分析与防御平台</font>：</p><p>&nbsp;&nbsp;<font color="#FF3030">IDS</font>：Intrusion Detection Systems，<font color="#FF3030">入侵检测系统</font>，是一种主动保护自己免受攻击的一种网络安全技术,专门检测有没有非法的入侵数据流。<br>IDS在交换式网络中的位置一般可以选择为尽可能靠近攻击源、尽可能靠近受保护资源的地方,一般部署位置在internet接入路由器之后的第一台交换机。</p>
           
           <div class="home-post-tags">
             
@@ -892,23 +989,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-13 19:53:57 / 修改时间：20:33:43" itemprop="dateCreated datePublished" datetime="2019-10-13T19:53:57+08:00">2019-10-13</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -957,7 +1037,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x672F;&#x8BED;"><a href="#&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x672F;&#x8BED;" class="headerlink" title="&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x672F;&#x8BED;"></a>&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x672F;&#x8BED;</h2><p><font color="#EE4000">SQL</font><br>SQL&#xFF08;Struct Querry Language&#xFF09;<font color="#EE799F">&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;</font>,&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x548C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x53D6;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x67E5;&#x8BE2;&#x3001;&#x66F4;&#x65B0;&#x548C;&#x7BA1;&#x7406;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x540D;</p>
+          <h2 id="渗透测试术语"><a href="#渗透测试术语" class="headerlink" title="渗透测试术语"></a>渗透测试术语</h2><p><font color="#EE4000">SQL</font><br>SQL（Struct Querry Language）<font color="#EE799F">结构化查询语言</font>,是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名</p><p><font color="#EE4000">XSS</font><br>CSS（Cross  Site Script）<font color="#EE799F">跨站脚本攻击</font>，为了和HTML中的CSS（层叠样式）进行区分，在信息安全领域内，我们习惯将跨站脚本攻击称为“XSS”</p>
           
           <div class="home-post-tags">
             
@@ -1029,23 +1109,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-13 19:26:55 / 修改时间：19:50:55" itemprop="dateCreated datePublished" datetime="2019-10-13T19:26:55+08:00">2019-10-13</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -1094,7 +1157,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="&#x4FE1;&#x606F;&#x7CFB;&#x7EDF;&#x5B89;&#x5168;&#x7684;&#x5B9A;&#x4E49;"><a href="#&#x4FE1;&#x606F;&#x7CFB;&#x7EDF;&#x5B89;&#x5168;&#x7684;&#x5B9A;&#x4E49;" class="headerlink" title="&#x4FE1;&#x606F;&#x7CFB;&#x7EDF;&#x5B89;&#x5168;&#x7684;&#x5B9A;&#x4E49;"></a>&#x4FE1;&#x606F;&#x7CFB;&#x7EDF;&#x5B89;&#x5168;&#x7684;&#x5B9A;&#x4E49;</h2><p>a&gt;<font color="#FF4040"> &#x673A;&#x5BC6;&#x6027;(Confidentiality)</font>:&#x5BF9;&#x4FE1;&#x606F;&#x6216;&#x8D44;&#x6E90;&#x7684;&#x9690;&#x85CF;&#xFF0C;&#x4FE1;&#x606F;&#x4E0D;&#x88AB;&#x975E;&#x6388;&#x6743;&#x4EBA;&#x5458;&#x6240;&#x83B7;&#x53D6;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4E0D;&#x88AB;&#x201D;&#x975E;&#x6388;&#x6743;&#x4EBA;&#x5458;&#x201D;&#x8BFB;&#x53D6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<font color="#FF4040">&#x63A7;&#x5236;&#x201D;r&#x201D;&#x6743;&#x9650;</font></p>
+          <h2 id="信息系统安全的定义"><a href="#信息系统安全的定义" class="headerlink" title="信息系统安全的定义"></a>信息系统安全的定义</h2><p>a&gt;<font color="#FF4040"> 机密性(Confidentiality)</font>:对信息或资源的隐藏，信息不被非授权人员所获取，本质上就是不被”非授权人员”读取，也就是<font color="#FF4040">控制”r”权限</font></p><p>b&gt;<font color="#FF4040"> 完整性 （Integrity)</font>：对数据或资源的可信赖程度，通常用于表述防止不当或未经授权的修改，也就是<font color="#FF4040">控制”w”权限</font>,主要是为了阻止未经授权的改写数据企图         </p>
           
           <div class="home-post-tags">
             
@@ -1166,23 +1229,6 @@
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-13 18:52:37 / 修改时间：20:37:17" itemprop="dateCreated datePublished" datetime="2019-10-13T18:52:37+08:00">2019-10-13</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
@@ -1231,7 +1277,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;"><a href="#&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;" class="headerlink" title="&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;"></a>&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</h2><p>&#x6E17;&#x900F;&#x6D4B;&#x8BD5;&#x662F;&#x53D7;&#x4FE1;&#x4EFB;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x9ED1;&#x5BA2;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x7684;&#x653B;&#x51FB;&#x624B;&#x6BB5;&#x5BF9;&#x76EE;&#x6807;&#x7CFB;&#x7EDF;&#x7684;&#x5B89;&#x5168;&#x6027;&#x4F5C;&#x51FA;&#x98CE;&#x9669;&#x8BC4;&#x4F30;&#x5E76;&#x9488;&#x5BF9;&#x76EE;&#x6807;&#x7CFB;&#x7EDF;&#x6240;&#x5B58;&#x5728;&#x7684;&#x98CE;&#x9669;&#x7ED9;&#x51FA;&#x5B89;&#x5168;&#x4FEE;&#x590D;&#x5EFA;&#x8BAE;&#x7684;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x3002;</p>
+          <h2 id="渗透测试的定义："><a href="#渗透测试的定义：" class="headerlink" title="渗透测试的定义："></a>渗透测试的定义：</h2><p>渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。</p><p>注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险</p><p>意义：<br>通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。</p>
           
           <div class="home-post-tags">
             
@@ -1313,7 +1359,7 @@
             
                 <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
             </a>
             </div>
@@ -1418,7 +1464,7 @@
     <span>分类</span>
     </div>
     <div>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul> 
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">2</span></li></ul> 
     </div>
 </div>
 
@@ -1447,19 +1493,19 @@
   &copy; 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">虫 二</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">13k</span>
+    <span title="站点总字数">17k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">12 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
 </div>
 
         
@@ -1497,6 +1543,26 @@
 
 
 
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: ,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
 
 
 
@@ -1518,6 +1584,8 @@
   
 
   
+    
+      
     
       
     

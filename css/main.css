@@ -1293,7 +1293,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a279ff;
+  background: #00d69f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1544,7 +1544,7 @@ pre .javascript .function {
   }
 }
 .with-love {
-  color: #808080;
+  color: #ff0000;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2078,6 +2078,9 @@ pre .javascript .function {
   .post-meta-item-icon {
     display: inline-block;
   }
+}
+.post-meta-item-text {
+  display: none;
 }
 @media (max-width: 991px) {
   .post-meta-item-text {
@@ -3255,4 +3258,7 @@ blockquote {
 }
 header#header {
   padding: 0px 8px;
+}
+.posts-expand .post-body img {
+  border: 0px;
 }
