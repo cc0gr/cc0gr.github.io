@@ -397,7 +397,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="设计模式之观察者模式-c"><a href="#设计模式之观察者模式-c" class="headerlink" title="设计模式之观察者模式-c++"></a>设计模式之观察者模式-c++</h1><p>定义了对象间的一对多的依赖关系，让多个观察者对象同时监听某一个主题对象（被观察者）。当主题对象的状态发生更改时，会通知所有观察者，让它们能够自动更新。也称之为发布(Publish)-订阅(Subscribe)模式。<br><img src="//github.com/o7key/o7key.github.io/2019/10/17/observer/observer.jpg" alt="UML"></p><p>Subject（抽象主题）：跟踪所有观察者，并提供添加和删除观察者的接口。<br>Observer（抽象观察者）：为所有的具体观察者定义一个接口，在得到主题的通知时进行自我更新。<br>ConcreteSubject（具体主题）：将有关状态存入各 ConcreteObserver 对象。当具体主题的状态发生任何更改时，通知所有观察者。<br>ConcreteObserver（具体观察者）：实现 Observer 所要求的更新接口，以便使本身的状态与主题的状态相协调。</p><a id="more"></a>
+        <h1 id="设计模式之观察者模式-c"><a href="#设计模式之观察者模式-c" class="headerlink" title="设计模式之观察者模式-c++"></a>设计模式之观察者模式-c++</h1><p>定义了对象间的一对多的依赖关系，让多个观察者对象同时监听某一个主题对象（被观察者）。当主题对象的状态发生更改时，会通知所有观察者，让它们能够自动更新。也称之为发布(Publish)-订阅(Subscribe)模式。<br><img src="/o7key/o7key.github.io/2019/10/17/observer/observer.jpg" alt="UML"></p><p>Subject（抽象主题）：跟踪所有观察者，并提供添加和删除观察者的接口。<br>Observer（抽象观察者）：为所有的具体观察者定义一个接口，在得到主题的通知时进行自我更新。<br>ConcreteSubject（具体主题）：将有关状态存入各 ConcreteObserver 对象。当具体主题的状态发生任何更改时，通知所有观察者。<br>ConcreteObserver（具体观察者）：实现 Observer 所要求的更新接口，以便使本身的状态与主题的状态相协调。</p><a id="more"></a>
 
 <p>代码实现：</p>
 <ol>
