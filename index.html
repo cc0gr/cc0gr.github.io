@@ -466,11 +466,28 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2019/10/18/factory/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2019/10/18/factory/" class="post-title-link" itemprop="url">设计模式之工厂方法模式</a>
           
         </h1>
 
         <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
           <br>
@@ -481,7 +498,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>2.9k</span>
+              <span>2.8k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -504,10 +521,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr><p>title: 设计模式之工厂方法模式<br>date: 2019-10-16 21:15:22<br>tags:</p><ul>
-<li>c++设计模式<br>categories: 设计模式</li>
-</ul><hr><h1 id="设计模式之工厂方法模式-c"><a href="#设计模式之工厂方法模式-c" class="headerlink" title="设计模式之工厂方法模式-c++"></a>设计模式之工厂方法模式-c++</h1><p>工厂方法模式（Factory Method Pattern）是一种常用的对象创建型设计模式。通过定义一个创建对象的接口，让其子类决定实例化哪一个工厂类，一个工厂类创建一个实例，工厂模式使其创建过程延迟到子类进行。主要是解决简单工厂模式开放-封闭原则问题。</p>
-             
+          <h1 id="设计模式之工厂方法模式-c"><a href="#设计模式之工厂方法模式-c" class="headerlink" title="设计模式之工厂方法模式-c++"></a>设计模式之工厂方法模式-c++</h1><p>工厂方法模式（Factory Method Pattern）是一种常用的对象创建型设计模式。通过定义一个创建对象的接口，让其子类决定实例化哪一个工厂类，一个工厂类创建一个实例，工厂模式使其创建过程延迟到子类进行。主要是解决简单工厂模式开放-封闭原则问题。</p><p>Factory（抽象工厂）：是工厂方法模式的核心，与应用程序无关。任何在模式中创建的对象的工厂类必须实现这个接口,即提供一个虚函数 Create()。<br>ConcreteFactory（具体工厂）：实现抽象工厂接口的具体工厂类，包含与应用程序密切相关的逻辑，并且被应用程序调用以创建产品对象。<br>Product（抽象产品）：所创建对象的基类，也就是具体产品的共同父类或共同拥有的接口。<br>ConcreteProduct（具体产品）：实现了抽象产品角色所定义的接口。某具体产品有专门的具体工厂创建，它们之间往往一一对应</p>
+          
+          <div class="home-post-tags">
+            
+            <a href="/tags/c-设计模式/" rel="tag">c++设计模式</a>
+            
+            <script type="text/javascript">
+                var tagsall=document.getElementsByClassName("home-post-tags")
+                    for (var i = tagsall.length - 1; i >= 0; i--){
+                    var tags=tagsall[i].getElementsByTagName("a");
+                        for (var j = tags.length - 1; j >= 0; j--) {
+                            var r=Math.floor(Math.random()*255);
+                            var g=Math.floor(Math.random()*255);
+                            var b=Math.floor(Math.random()*255);
+                            tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }
+            </script>
+         </div>
+           
           <!--noindex-->
           
             <div class="post-button">
@@ -1687,7 +1720,7 @@
     <span>分类</span>
     </div>
     <div>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tcp/">tcp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">4</span></li></ul> 
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tcp/">tcp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/渗透测试/">渗透测试</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">5</span></li></ul> 
     </div>
 </div>
 
