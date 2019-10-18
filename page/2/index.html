@@ -55,35 +55,31 @@
   };
 </script>
 
-  <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+  <meta name="description" content="C/C++">
 <meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://github.com/o7key/o7key.github.io/about/index.html">
+<meta property="og:title" content="o7key&#39;s blog">
+<meta property="og:url" content="https://github.com/o7key/o7key.github.io/page/2/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="C/C++">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-12T09:28:59.569Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
-  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/about/">
+<meta name="twitter:title" content="o7key&#39;s blog">
+<meta name="twitter:description" content="C/C++">
+  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
+    isHome: true,
     isPost: false,
-    isPage: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>
-      关于我 | o7key's blog
-    
-  </title>
+  <title>o7key's blog</title>
   
 
 
@@ -318,81 +314,257 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">关于我
-  
-
-</h1>
-
-<div class="post-meta">
-  
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
         
-      </div>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/13/02-sec/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虫 二">
+      <meta itemprop="description" content="C/C++">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="o7key's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/13/02-sec/" class="post-title-link" itemprop="url">渗透测试之02基础篇</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.5k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-      
+          <h2 id="信息系统安全的定义"><a href="#信息系统安全的定义" class="headerlink" title="信息系统安全的定义"></a>信息系统安全的定义</h2><p>a&gt;<font color="#FF4040"> 机密性(Confidentiality)</font>:对信息或资源的隐藏，信息不被非授权人员所获取，本质上就是不被”非授权人员”读取，也就是<font color="#FF4040">控制”r”权限</font></p><p>b&gt;<font color="#FF4040"> 完整性 （Integrity)</font>：对数据或资源的可信赖程度，通常用于表述防止不当或未经授权的修改，也就是<font color="#FF4040">控制”w”权限</font>,主要是为了阻止未经授权的改写数据企图         </p>
+          
+          <div class="home-post-tags">
+            
+            <a href="/tags/webSec/" rel="tag">webSec</a>
+            
+            <script type="text/javascript">
+                var tagsall=document.getElementsByClassName("home-post-tags")
+                    for (var i = tagsall.length - 1; i >= 0; i--){
+                    var tags=tagsall[i].getElementsByTagName("a");
+                        for (var j = tags.length - 1; j >= 0; j--) {
+                            var r=Math.floor(Math.random()*255);
+                            var g=Math.floor(Math.random()*255);
+                            var b=Math.floor(Math.random()*255);
+                            tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }
+            </script>
+         </div>
+           
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/13/02-sec/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
       
     </div>
-    
 
     
     
     
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虫 二">
+      <meta itemprop="description" content="C/C++">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="o7key's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/2019/10/13/01-sec/" class="post-title-link" itemprop="url">渗透测试之01基础篇</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>1.4k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="渗透测试的定义："><a href="#渗透测试的定义：" class="headerlink" title="渗透测试的定义："></a>渗透测试的定义：</h2><p>渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。</p><p>注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险</p><p>意义：<br>通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。</p>
+          
+          <div class="home-post-tags">
+            
+            <a href="/tags/webSec/" rel="tag">webSec</a>
+            
+            <script type="text/javascript">
+                var tagsall=document.getElementsByClassName("home-post-tags")
+                    for (var i = tagsall.length - 1; i >= 0; i--){
+                    var tags=tagsall[i].getElementsByTagName("a");
+                        for (var j = tags.length - 1; j >= 0; j--) {
+                            var r=Math.floor(Math.random()*255);
+                            var g=Math.floor(Math.random()*255);
+                            var b=Math.floor(Math.random()*255);
+                            tags[j].style.background = "rgb("+r+","+g+","+b+")";
+                }
+            }
+            </script>
+         </div>
+           
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/2019/10/13/01-sec/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
   </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -653,6 +825,12 @@
 
   
 
+  
+    
+      
+    
+      
+    
   
 
   
