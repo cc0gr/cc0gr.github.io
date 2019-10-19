@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
-<meta name="keywords" content="webSec">
+  <meta name="description" content="设计模式之原型模式-c++原型模式（Prototype Pattern）是一种创建型设计模式，允许一个对象再创建另外一个可定制的对象，而无需知道任何创建的细节。即通过拷贝这些原型来创建新的对象。 Prototype（抽象原型）：定义了克隆自身的接口。  ConcretePrototype（具体原型）：被复制的对象，需要实现 Prototype 定义的接口。">
+<meta name="keywords" content="c++设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="渗透测试之01基础篇">
-<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/index.html">
+<meta property="og:title" content="设计模式之原型模式">
+<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/19/prototype/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
+<meta property="og:description" content="设计模式之原型模式-c++原型模式（Prototype Pattern）是一种创建型设计模式，允许一个对象再创建另外一个可定制的对象，而无需知道任何创建的细节。即通过拷贝这些原型来创建新的对象。 Prototype（抽象原型）：定义了克隆自身的接口。  ConcretePrototype（具体原型）：被复制的对象，需要实现 Prototype 定义的接口。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-13T12:37:17.277Z">
+<meta property="og:updated_time" content="2019-10-19T07:04:24.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="渗透测试之01基础篇">
-<meta name="twitter:description" content="渗透测试的定义：渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险意义：通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。">
-  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/">
+<meta name="twitter:title" content="设计模式之原型模式">
+<meta name="twitter:description" content="设计模式之原型模式-c++原型模式（Prototype Pattern）是一种创建型设计模式，允许一个对象再创建另外一个可定制的对象，而无需知道任何创建的细节。即通过拷贝这些原型来创建新的对象。 Prototype（抽象原型）：定义了克隆自身的接口。  ConcretePrototype（具体原型）：被复制的对象，需要实现 Prototype 定义的接口。">
+  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/19/prototype/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>渗透测试之01基础篇 | o7key's blog</title>
+  <title>设计模式之原型模式 | o7key's blog</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/19/prototype/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虫 二">
@@ -338,7 +338,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            渗透测试之01基础篇
+            设计模式之原型模式
             
 
           
@@ -352,8 +352,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
-                    <span itemprop="name">渗透测试</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -372,7 +372,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>1.4k</span>
+              <span>1.9k</span>
             </span>
           
             <span class="post-meta-item" title="阅读时长">
@@ -382,7 +382,7 @@
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
           
 
@@ -395,23 +395,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="渗透测试的定义："><a href="#渗透测试的定义：" class="headerlink" title="渗透测试的定义："></a>渗透测试的定义：</h2><p>渗透测试是受信任的第三方通过模拟黑客可能使用的攻击手段对目标系统的安全性作出风险评估并针对目标系统所存在的风险给出安全修复建议的一个测试过程。</p><p>注意：开展渗透测试前，一定要获取目标主机的官方有效授权，注意规避法律风险</p><p>意义：<br>通过渗透测试，可以使系统管理人员、系统开发人员及时了解到系统潜在的“安全危机”（薄弱点），并及时进行修复，加强系统的安全性，避免不必要的损失。</p><a id="more"></a>
+        <h1 id="设计模式之原型模式-c"><a href="#设计模式之原型模式-c" class="headerlink" title="设计模式之原型模式-c++"></a>设计模式之原型模式-c++</h1><p>原型模式（Prototype Pattern）是一种创建型设计模式，允许一个对象再创建另外一个可定制的对象，而无需知道任何创建的细节。即通过拷贝这些原型来创建新的对象。</p><ul>
+<li><p>Prototype（抽象原型）：定义了克隆自身的接口。</p>
+</li>
+<li><p>ConcretePrototype（具体原型）：被复制的对象，需要实现 Prototype 定义的接口。</p>
+</li>
+</ul><a id="more"></a>
 
+<p>代码实现：</p>
+<p><strong>创建抽象原型类</strong></p>
+<p>定义一个Prototype类，并提供一个 Clone() 接口，用于自我复制。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//prototype.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> PROTOTYPE_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PROTOTYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象原型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Prototype</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Prototype(){} </span><br><span class="line">    <span class="keyword">virtual</span> ~Prototype() {}</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> Prototype* <span class="title">Clone</span><span class="params">()</span><span class="keyword">const</span> </span>= <span class="number">0</span>; <span class="comment">//克隆</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="渗透测试的分类："><a href="#渗透测试的分类：" class="headerlink" title="渗透测试的分类："></a>渗透测试的分类：</h2><p><strong>（1）黑盒测试</strong><br>定义：渗透测试人员除了知道被测试的目标之外，其余于目标相关的信息一无所知<br>特点：这种类型的渗透测试属于外部渗透测试。在前期需要对目标进行大量的信息收集，耗时较长。但是这种类型的渗透测试更有利于挖掘出系统潜在的漏洞、以及脆弱环节、薄弱点等。</p>
-<p><strong>（2）白盒测试</strong><br>定义：渗透测试人员可以通过正常渠道向被测试单位取得各种资料，包括网络拓扑结构图、员工资料甚至网站程序的代码片段，也可以和单位其他员工进行面对面沟通。<br>特点：这种类型的渗透测试在前期已经对目标系统有了一个初步的了解。这类测试的地点可以分为“从组织内部”与“从组织外部”两种大环境。在这种测试下可以充分发挥<strong>“社会工程学的力量”</strong>，对企业内部雇员的越权操作进行测试。</p>
-<p><strong>（3）灰盒测试</strong><br>定义：灰盒测试介于白盒测试与黑盒测试之间。<br>特点：属于较为隐秘的测试。在测试当中，被测试单位只有少数人知晓测试的存在，因此能够较好的检验单位中的信息安全事件监控、响应等是否到位。</p>
-<h2 id="渗透测试按照测试目标可以分为四类："><a href="#渗透测试按照测试目标可以分为四类：" class="headerlink" title="渗透测试按照测试目标可以分为四类："></a>渗透测试按照测试目标可以分为四类：</h2><p><strong>（1）操作系统渗透</strong><br>Windows、Linux、Solaris、AIX、SCO等</p>
-<p><strong>（2）数据库系统渗透</strong><br>MySQL 、Oracle、MSSQL、sybase、informix</p>
-<p><strong>（3）应用系统渗透</strong><br>由ASP、JSP、PHP等组成的web应用（包括移动应用产品）</p>
-<p><strong>（4）网络设备渗透</strong><br>防火墙、入侵检测系统等</p>
-<h2 id="渗透测试流程："><a href="#渗透测试流程：" class="headerlink" title="渗透测试流程："></a>渗透测试流程：</h2><p><strong>（1）渗透测试目标以及界限的明确</strong><br>在进行渗透测试之前，需要与客户就渗透测试的目标、渗透测试的范围、渗透测试方式（黑盒、白盒、灰盒以及是否涉及社会工程学）进行商讨，达成一致协议，这一点至关重要。</p>
-<p><strong>（2）信息收集</strong><br>在（1）的基础之上，收集与将要进行渗透测试的目标相关的信息，在此过程中可以使用WEB扫描工具以及第三方信息收集工具、搜素引擎（Google）等。<br><font color="red">A： 基础信息获取</font><br>DNS域名信息<br>注册人信息（注册人姓名，电话、邮箱等）<br>网站或程序开发所涉及到的语言(php、jsp、ASP、Ajax、Html、xml等)<br>网站使用的服务器，数据库等信息</p>
-<p><font color="red"> B：WEB扫描信息获取</font><br>开发端口与服务识别<br>服务器操作系统类型<br>目标网络结构…等等</p>
-<p><strong>（3）威胁建模</strong><br>根据（2）中收集到的信息，对测试目标进行威胁建模，查找与渗透测试目标所开启的服务、开放的端口、使用的服务器、域名、编程逻辑、编程语言等等信息中存在的可利用漏洞信息，并且制定渗透测试方案。</p>
-<p><strong>（4）前期渗透测试</strong><br>根据（3）中制定的渗透测试方案开始渗透测试<strong>（注意前期商议的渗透测试界线范围）</strong></p>
-<p><strong>（5）后渗透测试</strong><br>后渗透测试主要是在前期渗透测试的基础上扩大影响范围、提高权限、建立维持访问、清理痕迹等。后渗透测试在整个渗透测试中相当重要。</p>
-<p><strong>（6）渗透测试报告书写</strong><br>在这个过程中，需要将系统中所存在的漏洞、漏洞的证明、系统潜在的安全威胁、针对安全威胁给出的修复建议等给出详细的说明。</p>
+<p><strong>创建具体原型类</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//concrete_prototype.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CONCRETE_PROTOTYPE_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONCRETE_PROTOTYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"prototype.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcretePrototype</span> :</span> <span class="keyword">public</span> Prototype</span><br><span class="line">{</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ConcretePrototype(<span class="built_in">string</span> name){ m_strName = name;}</span><br><span class="line">    ~ConcretePrototype(){}</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//拷贝构造函数</span></span><br><span class="line">    ConcretePrototype(<span class="keyword">const</span> ConcretePrototype &amp;other)</span><br><span class="line">    {</span><br><span class="line">        m_strName = other.m_strName;</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">     <span class="function">Prototype* <span class="title">Clone</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        <span class="comment">//调用拷贝构造函数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ConcretePrototype(*<span class="keyword">this</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;m_strName&lt;&lt;<span class="string">" Concrete_prototype "</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">string</span> m_strName;</span><br><span class="line"></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>测试main.cpp</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"concrete_prototype.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> DELETE</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DELETE(obj){do{<span class="meta-keyword">if</span>(obj){delete(obj);(obj)=nullptr;}}while(0);}</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">//创建原型</span></span><br><span class="line">    Prototype *prototype = <span class="keyword">new</span> ConcretePrototype(<span class="string">"key"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//克隆</span></span><br><span class="line">    Prototype *copyOne = prototype-&gt;Clone();</span><br><span class="line">    Prototype *copyTwo = prototype-&gt;Clone();</span><br><span class="line"></span><br><span class="line">    copyOne-&gt;Show();</span><br><span class="line">    copyTwo-&gt;Show();</span><br><span class="line">    </span><br><span class="line">    DELETE(copyOne);</span><br><span class="line">    DELETE(copyTwo);</span><br><span class="line">    DELETE(prototype);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span>.get();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -447,7 +448,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/" title="渗透测试之01基础篇">https://github.com/o7key/o7key.github.io/2019/10/13/01-sec/</a>
+    <a href="https://github.com/o7key/o7key.github.io/2019/10/19/prototype/" title="设计模式之原型模式">https://github.com/o7key/o7key.github.io/2019/10/19/prototype/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -463,7 +464,7 @@
           
           <div class="post-tags" id="post-tags">
             
-                <a href="/tags/webSec/" rel="tag"><i class="fa fa-tag"></i> webSec</a>
+                <a href="/tags/c-设计模式/" rel="tag"><i class="fa fa-tag"></i> c++设计模式</a>
             
           </div>
           <script type="text/javascript">
@@ -491,15 +492,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/10/18/AbstractFactory/" rel="next" title="设计模式之抽象工厂模式">
+                  <i class="fa fa-chevron-left"></i> 设计模式之抽象工厂模式
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/10/13/02-sec/" rel="prev" title="渗透测试之02基础篇">
-                  渗透测试之02基础篇 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -660,7 +661,7 @@
         
 
         
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试的定义："><span class="nav-number">1.</span> <span class="nav-text">渗透测试的定义：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试的分类："><span class="nav-number">2.</span> <span class="nav-text">渗透测试的分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试按照测试目标可以分为四类："><span class="nav-number">3.</span> <span class="nav-text">渗透测试按照测试目标可以分为四类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试流程："><span class="nav-number">4.</span> <span class="nav-text">渗透测试流程：</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之原型模式-c"><span class="nav-number">1.</span> <span class="nav-text">设计模式之原型模式-c++</span></a></li></ol></div>
         
         </div>
     </div>

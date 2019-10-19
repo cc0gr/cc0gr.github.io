@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>设计模式之原型模式</title>
+    <url>/2019/10/19/prototype/</url>
+    <content><![CDATA[<h1 id="设计模式之原型模式-c"><a href="#设计模式之原型模式-c" class="headerlink" title="设计模式之原型模式-c++"></a>设计模式之原型模式-c++</h1><p>原型模式（Prototype Pattern）是一种创建型设计模式，允许一个对象再创建另外一个可定制的对象，而无需知道任何创建的细节。即通过拷贝这些原型来创建新的对象。</p><ul>
+<li><p>Prototype（抽象原型）：定义了克隆自身的接口。</p>
+</li>
+<li><p>ConcretePrototype（具体原型）：被复制的对象，需要实现 Prototype 定义的接口。</p>
+</li>
+</ul><a id="more"></a>
+
+<p>代码实现：</p>
+<p><strong>创建抽象原型类</strong></p>
+<p>定义一个Prototype类，并提供一个 Clone() 接口，用于自我复制。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//prototype.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> PROTOTYPE_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PROTOTYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象原型</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Prototype</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Prototype(){} </span><br><span class="line">    <span class="keyword">virtual</span> ~Prototype() {}</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> Prototype* <span class="title">Clone</span><span class="params">()</span><span class="keyword">const</span> </span>= <span class="number">0</span>; <span class="comment">//克隆</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>创建具体原型类</strong></p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//concrete_prototype.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> CONCRETE_PROTOTYPE_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONCRETE_PROTOTYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"prototype.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcretePrototype</span> :</span> <span class="keyword">public</span> Prototype</span><br><span class="line">{</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ConcretePrototype(<span class="built_in">string</span> name){ m_strName = name;}</span><br><span class="line">    ~ConcretePrototype(){}</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//拷贝构造函数</span></span><br><span class="line">    ConcretePrototype(<span class="keyword">const</span> ConcretePrototype &amp;other)</span><br><span class="line">    {</span><br><span class="line">        m_strName = other.m_strName;</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">     <span class="function">Prototype* <span class="title">Clone</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        <span class="comment">//调用拷贝构造函数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ConcretePrototype(*<span class="keyword">this</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;m_strName&lt;&lt;<span class="string">" Concrete_prototype "</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">string</span> m_strName;</span><br><span class="line"></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>测试main.cpp</p>
+<figure class="highlight c++"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"concrete_prototype.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> DELETE</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DELETE(obj){do{<span class="meta-keyword">if</span>(obj){delete(obj);(obj)=nullptr;}}while(0);}</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="comment">//创建原型</span></span><br><span class="line">    Prototype *prototype = <span class="keyword">new</span> ConcretePrototype(<span class="string">"key"</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//克隆</span></span><br><span class="line">    Prototype *copyOne = prototype-&gt;Clone();</span><br><span class="line">    Prototype *copyTwo = prototype-&gt;Clone();</span><br><span class="line"></span><br><span class="line">    copyOne-&gt;Show();</span><br><span class="line">    copyTwo-&gt;Show();</span><br><span class="line">    </span><br><span class="line">    DELETE(copyOne);</span><br><span class="line">    DELETE(copyTwo);</span><br><span class="line">    DELETE(prototype);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span>.get();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>c++设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>设计模式之抽象工厂模式</title>
     <url>/2019/10/18/AbstractFactory/</url>
     <content><![CDATA[<h1 id="设计模式之抽象工厂模式"><a href="#设计模式之抽象工厂模式" class="headerlink" title="设计模式之抽象工厂模式"></a>设计模式之抽象工厂模式</h1><p>抽象工厂模式是指当有多个抽象角色时，使用的一种工厂模式。例如：</p><ul>
