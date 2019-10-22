@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="o7key&#39;s blog">
 <meta property="og:description" content="设计模式之命令模式-c++命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传递给调用对象。调用对象寻找可以处理该命令的合适对象，并把该命令传给相应的对象，该对象执行命令。也可以理解为一个作为对象的函数，通过将函数封装起来作为对象，以参数的形式传递给其它函数或对象。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-21T13:03:10.013Z">
+<meta property="og:updated_time" content="2019-10-21T13:45:29.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之命令模式">
 <meta name="twitter:description" content="设计模式之命令模式-c++命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传递给调用对象。调用对象寻找可以处理该命令的合适对象，并把该命令传给相应的对象，该对象执行命令。也可以理解为一个作为对象的函数，通过将函数封装起来作为对象，以参数的形式传递给其它函数或对象。">
@@ -238,7 +238,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
 
   </li>
       
@@ -396,7 +396,7 @@
 
       
         <h1 id="设计模式之命令模式-c"><a href="#设计模式之命令模式-c" class="headerlink" title="设计模式之命令模式-c++"></a>设计模式之命令模式-c++</h1><p>命令模式（Command Pattern）是一种数据驱动的设计模式，它属于行为型模式。请求以命令的形式包裹在对象中，并传递给调用对象。调用对象寻找可以处理该命令的合适对象，并把该命令传给相应的对象，该对象执行命令。也可以理解为一个作为对象的函数，通过将函数封装起来作为对象，以参数的形式传递给其它函数或对象。</p><a id="more"></a>
-<p>Command：定义命令的接口，声明执行的方法。<br>ConcreteCommand：命令接口实现对象，是“虚”的实现；通常会持有接收者，并调用接收者的功能来完成命令要执行的操作。<br>Receiver：接收者，真正执行命令的对象。任何类都可能成为一个接收者，只要它能够实现命令要求实现的相应功能。<br>Invoker：要求命令对象执行请求，通常会持有命令对象，可以持有很多的命令对象。这个是客户端真正触发命令并要求命令执行相应操作的地方，也就是说相当于使用命令对象的入口。<br>Client：创建具体命令对象，并设置其接收者（注意： 这并非常规意义上的客户端，而是在组装命令对象和接收者。或许，把这个 Client 称为装配者会更好理解，因为真正使用命令的客户端是从 Invoker 来触发执行）。</p>
+<p>Command：定义命令的接口，声明执行的方法。<br>ConcreteCommand：命令接口实现对象，是“虚”的实现；通常会持有接收者，并调用接收者的功能来完成命令要执行的操作。<br>Receiver：接收者，真正执行命令的对象。任何类都可能成为一个接收者，只要它能够实现命令要求实现的相应功能。<br>Invoker：要求命令对象执行请求，通常会持有命令对象，可以持有很多的命令对象。这个是客户端真正触发命令并要求命令执行相应操作的地方，也就是说相当于使用命令对象的入口。<br>Client：创建具体命令对象，并设置其接收者（注意： 这并非常正规意义上的客户端，而是在组装命令对象和接收者。或许，把这个 Client 称为装配者会更好理解，因为真正使用命令的客户端是从 Invoker 来触发执行）。</p>
 <p>代码实现：</p>
 <p><strong>接收者类</strong></p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//reciever.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> RECIEVER_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RECIEVER_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*接受者类*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Reciever</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Reciever(<span class="comment">/*args*/</span>);</span><br><span class="line"></span><br><span class="line">    ~Reciever();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Aciton1</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Action2</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Action3</span><span class="params">()</span></span>;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
@@ -511,6 +511,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/10/22/TemplateMethod/" rel="prev" title="设计模式之模板方法模式">
+                  设计模式之模板方法模式 <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -555,7 +559,7 @@
                 
                 <a href="/archives/">
                 
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
                 </a>
             </div>
@@ -700,12 +704,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">44k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
 </div>
 
         
