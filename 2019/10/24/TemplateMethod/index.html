@@ -55,19 +55,19 @@
   };
 </script>
 
-  <meta name="description" content="设计模式之模版方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
+  <meta name="description" content="设计模式之模板方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
 <meta name="keywords" content="c++设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之模板方法模式">
-<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/22/TemplateMethod/index.html">
+<meta property="og:url" content="https://github.com/o7key/o7key.github.io/2019/10/24/TemplateMethod/index.html">
 <meta property="og:site_name" content="o7key&#39;s blog">
-<meta property="og:description" content="设计模式之模版方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
+<meta property="og:description" content="设计模式之模板方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-22T15:31:09.332Z">
+<meta property="og:updated_time" content="2019-10-24T13:23:45.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之模板方法模式">
-<meta name="twitter:description" content="设计模式之模版方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
-  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/22/TemplateMethod/">
+<meta name="twitter:description" content="设计模式之模板方法模式-c++模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定">
+  <link rel="canonical" href="https://github.com/o7key/o7key.github.io/2019/10/24/TemplateMethod/">
 
 
 <script id="page-configurations">
@@ -238,7 +238,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
 
   </li>
       
@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/22/TemplateMethod/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/o7key/o7key.github.io/2019/10/24/TemplateMethod/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虫 二">
@@ -395,7 +395,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="设计模式之模版方法模式-c"><a href="#设计模式之模版方法模式-c" class="headerlink" title="设计模式之模版方法模式-c++"></a>设计模式之模版方法模式-c++</h1><p>模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p><p>抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定义在 AbstractClass 或其他对象中的操作。<br>具体类（ConcreteClass）：实现原始操作以完成算法中与特定子类相关的步骤</p><a id="more"></a>
+        <h1 id="设计模式之模板方法模式-c"><a href="#设计模式之模板方法模式-c" class="headerlink" title="设计模式之模板方法模式-c++"></a>设计模式之模板方法模式-c++</h1><p>模版方法模式（Template Method Pattern）定义一个操作中算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p><p>抽象类（AbstractClass）：定义抽象的原始操作，具体的子类将重定义它们以实现一个算法的各步骤。主要是实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原始操作，也调用定义在 AbstractClass 或其他对象中的操作。<br>具体类（ConcreteClass）：实现原始操作以完成算法中与特定子类相关的步骤</p><a id="more"></a>
 
 <p>代码实现：</p>
 <h3 id="创建抽象类"><a href="#创建抽象类" class="headerlink" title="创建抽象类"></a><strong>创建抽象类</strong></h3><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//abstract_class.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> ABSTRACT_CLASS_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ABSTRACT_CLASS_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//抽象类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AbstractClass</span></span></span><br><span class="line"><span class="class">{</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    AbstractClass(<span class="comment">/*args*/</span>){}</span><br><span class="line">    <span class="keyword">virtual</span> ~AbstractClass(){}</span><br><span class="line"></span><br><span class="line">    <span class="comment">//该类的模板方法,即该类可以抽离出同样的操作步骤</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">TemplateMethod</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        PrimitiveOperation1();</span><br><span class="line">        PrimitiveOperation2();</span><br><span class="line">        PrimitiveOperation3();</span><br><span class="line">    }</span><br><span class="line">    <span class="comment">//纯虚函数，子类必须定义实现</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">PrimitiveOperation1</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//父类可以什么都不用做</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">PrimitiveOperation2</span><span class="params">()</span> </span>{}</span><br><span class="line">    <span class="comment">//父类也可以做点什么</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">PrimitiveOperation3</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>{</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;<span class="string">"Parent Operation3"</span>&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></tbody></table></figure>
@@ -439,7 +439,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://github.com/o7key/o7key.github.io/2019/10/22/TemplateMethod/" title="设计模式之模板方法模式">https://github.com/o7key/o7key.github.io/2019/10/22/TemplateMethod/</a>
+    <a href="https://github.com/o7key/o7key.github.io/2019/10/24/TemplateMethod/" title="设计模式之模板方法模式">https://github.com/o7key/o7key.github.io/2019/10/24/TemplateMethod/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -483,8 +483,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/21/command/" rel="next" title="设计模式之命令模式">
-                  <i class="fa fa-chevron-left"></i> 设计模式之命令模式
+                <a href="/2019/10/24/Adaptee/" rel="next" title="设计模式之适配器模式">
+                  <i class="fa fa-chevron-left"></i> 设计模式之适配器模式
                 </a>
               
             </div>
@@ -537,7 +537,7 @@
                 
                 <a href="/archives/">
                 
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
                 </a>
             </div>
@@ -652,7 +652,7 @@
         
 
         
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之模版方法模式-c"><span class="nav-number">1.</span> <span class="nav-text">设计模式之模版方法模式-c++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建抽象类"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建具体类"><span class="nav-number">1.0.2.</span> <span class="nav-text">创建具体类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试实现"><span class="nav-number">1.0.3.</span> <span class="nav-text">测试实现</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之模板方法模式-c"><span class="nav-number">1.</span> <span class="nav-text">设计模式之模板方法模式-c++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建抽象类"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建具体类"><span class="nav-number">1.0.2.</span> <span class="nav-text">创建具体类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试实现"><span class="nav-number">1.0.3.</span> <span class="nav-text">测试实现</span></a></li></ol></li></ol></li></ol></div>
         
         </div>
     </div>
@@ -682,12 +682,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">47k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">40 分钟</span>
+    <span title="站点阅读时长">42 分钟</span>
 </div>
 
         
